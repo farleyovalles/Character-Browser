@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="overwatch.css">
+    <script src="script.js"></script>
+   
+    </head>
+
+    <body onload="start()">
+
+        <header>
+            <h1>Overwatch Characters</h1>
+        </header>
+
+        <div class="float-right" id="editAdd">
+            <button id="editBtn" onclick="edit()">Edit</button>
+            <button id="addNew" onclick="addChar()">Add New</button>
+            <button id="sortBtnABC" onclick="sortABC()">SortABC</button>
+            <button id="sortBtn123" onclick="sort123()">Sort123</button>
+        </div>
+
+        <div class="info">
+            <form id="characterData" method="POST" enctype="multipart/form-data" >
+                <fieldset id = "charInfo">
+                    <legend>Info</legend>
+                    <input type="text" id="pkey" name="pkey" value="" readonly hidden>
+
+                    <label for="name" >Character Name: </label>
+                    <input type="text" id="name" name="name" value="" readonly>
+                
+                    <label for="gender">Gender: </label>
+                    <input type="text" id="gender" name="gender" value="" readonly>
+
+                    <label for="year">Release Year: </label>
+                    <input type="number" id="year" name="year" value="" readonly>
+                </fieldset>
+
+                <fieldset id="charRole" disabled>
+                    <legend>Role</legend>
+                        <label for="tank">Tank: </label>
+                        <input type="radio" name="roleType" id="tank" value="Tank" />
+                        <label for="samage">Damage: </label>
+                        <input type="radio" name="roleType" id="damage" value="Damage"/>
+                        <label for="support">Support: </label>
+                        <input type="radio" name="roleType" id="support" value="Support"/>
+                    </select> 
+                </fieldset>
+
+                <fieldset id="charFireType" disabled>
+                    <legend>Fire Type</legend>
+                    <label for="fireType">Hitscan: </label>
+                    <input type="checkbox" name="checkbox" id="fireType"  value="1">
+                </fieldset>
+
+                <fieldset id="imgUpload" hidden>
+                    <legend>Image Upload</legend>
+                    <input type="file" name="fileup" id="fileup">
+                </fieldset>
+
+                <fieldset id="editBtns">
+                    <button id="cancelBtn" onclick="cancel()">Cancel</button>
+                    <input type="submit" id="updateBtn" name="Update" value="Update" formaction="updateChar.php">
+                    <input type="submit" id="delBtn" name="Delete" value="Delete" formaction="delChar.php">
+                </fieldset>
+
+                <fieldset id="saveBtns">
+                    <button id="cancelBtn" onclick="cancel()">Cancel</button>
+                    <input type="submit" id="saveBtn" name="Save" value="Save" formaction="addChar.php">
+                </fieldset>
+            </form>    
+
+            <div id="Image">
+                <img id="characterImage" src="" loading="lazy"> 
+                <form id="imgUpload" action="uploadfile.php" method="post" enctype="multipart/form-data">
+                </form>
+            </div>
+
+            <div id = "indices">
+                <div id = "currIndex"></div>
+                <div>/</div>
+                <div id = "indexOf"></div>
+            </div>
+        </div>
+         
+        <div id="navBtns">
+            <button id="firstBtn" onclick="first()">First</button>
+            <button id="prevBtn" onclick="prev()">Prev</button>
+            <button id="nextBtn" onclick="next()">Next</button>
+            <button id="lastBtn" onclick="last()">Last</button>
+        </div>
+
+
+    
+        <footer>
+            <p> 
+                <b>Email:</b>
+                <a href="mailto:farleyo@mail.fresnostate.edu">farleyo@mail.frenostate.edu</a>
+            </p>
+
+            <p> Farley Ovalles</p>
+
+            <p>Computer Science</p>
+
+        </footer>
+
+    </body>
+
+</html>

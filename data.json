@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Brigitte",
+        "gender": "Female",
+        "releaseYear": "2018",
+        "hitscan": "0",
+        "role":"Support",
+        "imageLink": "images/Brigette.png"
+    },
+    {
+        "name": "Echo",
+        "gender": "Female",
+        "releaseYear": "2020",
+        "hitscan": "0",
+        "role":"Damage",
+        "imageLink": "images/Echo.png"
+    },
+    {
+        "name": "Soldier76",
+        "gender": "Male",
+        "releaseYear": "2016",
+        "hitscan": "1",
+        "role":"Damage",
+        "imageLink": "images/Soldier76.png"
+    },
+    {
+        "name": "Doomfist",
+        "gender": "Male",
+        "releaseYear": "2017",
+        "hitscan": "0",
+        "role":"Tank",
+        "imageLink": "images/Doomfist.png"
+    },
+    {
+        "name": "Kiriko",
+        "gender": "Female",
+        "releaseYear": "2022",
+        "hitscan": "0",
+        "role":"Support",
+        "imageLink": "images/Kiriko.png"
+    }
+]
